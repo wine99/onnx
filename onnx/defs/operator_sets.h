@@ -976,6 +976,7 @@ class OpSet_Onnx_ver16 {
 
 // Forward declarations for ai.onnx version 17
 class ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, LayerNormalization);
+class ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 14, SimplifiedLayerNormalization);
 class ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, SequenceMap);
 class ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, DFT);
 class ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, HannWindow);
@@ -989,6 +990,7 @@ class OpSet_Onnx_ver17 {
  public:
   static void ForEachSchema(const std::function<void(OpSchema&&)>& fn) {
     fn(GetOpSchema<ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, LayerNormalization)>());
+    fn(GetOpSchema<ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 14, SimplifiedLayerNormalization)>());
     fn(GetOpSchema<ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, SequenceMap)>());
     fn(GetOpSchema<ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, DFT)>());
     fn(GetOpSchema<ONNX_OPERATOR_SET_SCHEMA_CLASS_NAME(Onnx, 17, HannWindow)>());
